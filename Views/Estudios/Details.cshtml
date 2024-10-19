@@ -1,0 +1,63 @@
+﻿@model personapi_dotnet.Models.Entities.Estudio
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Estudio</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Univer)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Univer)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CcPerNavigation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CcPerNavigation.Cc)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IdProfNavigation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdProfNavigation.Id)
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.IdProf" class="btn btn-primary">Edit</a>
+</div>
+
+<div class="nav-box">
+    <a asp-action="Index" class="nav-link">Volver a la lista</a>
+</div>
+
+<style>
+    .nav-box {
+        background-color: #e0f7fa; /* Color de fondo claro */
+        padding: 10px; /* Espaciado */
+        border-radius: 5px; /* Bordes redondeados */
+        margin-top: 20px; /* Espaciado superior */
+    }
+
+    .nav-link {
+        color: white; /* Color de texto blanco */
+        padding: 10px 15px; /* Espaciado interno */
+        border-radius: 5px; /* Bordes redondeados para enlaces */
+        background-color: #007bff; /* Azul */
+        text-decoration: none; /* Sin subrayado */
+    }
+</style>

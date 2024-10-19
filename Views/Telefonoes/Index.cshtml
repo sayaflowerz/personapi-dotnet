@@ -1,0 +1,90 @@
+﻿@model IEnumerable<personapi_dotnet.Models.Entities.Telefono>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a class="nav-link nav-home" href="http://localhost:9090/Telefonoes/Create">Create</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Oper)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DuenioNavigation.Cc)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Oper)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DuenioNavigation.Cc)
+                </td>
+                <td>
+                    <div class="nav-box">
+                        <a class="nav-link nav-edit" asp-action="Edit" asp-route-id="@item.Num">Edit</a> |
+                        <a class="nav-link nav-details" asp-action="Details" asp-route-id="@item.Num">Details</a> |
+                        <a class="nav-link nav-delete" asp-action="Delete" asp-route-id="@item.Num">Delete</a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .nav-box {
+        background-color: #e0f7fa; /* Color de fondo claro */
+        padding: 10px; /* Espaciado */
+        border-radius: 5px; /* Bordes redondeados */
+        display: flex; /* Para alinear los enlaces */
+        justify-content: space-around; /* Espacio entre enlaces */
+    }
+
+    .nav-link {
+        color: white; /* Color de texto blanco */
+        padding: 10px 15px; /* Espaciado interno */
+        border-radius: 5px; /* Bordes redondeados para enlaces */
+    }
+
+    .nav-home {
+        background-color: #007bff;
+    }
+    /* Azul */
+    .nav-swagger {
+        background-color: #0056b3;
+    }
+    /* Azul más oscuro */
+    .nav-personas {
+        background-color: #003f7f;
+    }
+    /* Azul más oscuro */
+    .nav-profesiones {
+        background-color: #002b5c;
+    }
+    /* Azul más oscuro */
+    .nav-estudios {
+        background-color: #001f3f;
+    }
+    /* Azul muy oscuro */
+    .nav-telefonos {
+        background-color: #001f33;
+    }
+    /* Azul casi negro */
+</style>

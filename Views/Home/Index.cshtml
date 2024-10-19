@@ -1,0 +1,95 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - personapi_dotnet</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/personapi_dotnet.styles.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .nav-box {
+            background-color: #e0f7fa; /* Color de fondo claro */
+            padding: 10px; /* Espaciado */
+            border-radius: 5px; /* Bordes redondeados */
+            display: flex; /* Para alinear los enlaces */
+            justify-content: space-around; /* Espacio entre enlaces */
+        }
+
+        .nav-link {
+            color: white; /* Color de texto blanco */
+            padding: 10px 15px; /* Espaciado interno */
+            border-radius: 5px; /* Bordes redondeados para enlaces */
+        }
+
+        .nav-home {
+            background-color: #007bff;
+        }
+        /* Azul */
+        .nav-swagger {
+            background-color: #0056b3;
+        }
+        /* Azul más oscuro */
+        .nav-personas {
+            background-color: #003f7f;
+        }
+        /* Azul más oscuro */
+        .nav-profesiones {
+            background-color: #002b5c;
+        }
+        /* Azul más oscuro */
+        .nav-estudios {
+            background-color: #001f3f;
+        }
+        /* Azul muy oscuro */
+        .nav-telefonos {
+            background-color: #001f33;
+        }
+        /* Azul casi negro */
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-light border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <div class="nav-box">
+                        <a class="nav-link nav-home" href="http://localhost:9090/Home/Index">Home</a>
+                        <a class="nav-link nav-swagger" href="http://localhost:9090/Index.html">Swagger</a>
+                        <a class="nav-link nav-personas" href="http://localhost:9090/Personas">Personas</a>
+                        <a class="nav-link nav-profesiones" href="http://localhost:9090/Profesions">Profesiones</a>
+                        <a class="nav-link nav-estudios" href="http://localhost:9090/Estudios">Estudios</a>
+                        <a class="nav-link nav-telefonos" href="http://localhost:9090/Telefonoes">Teléfonos</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            <div class="text-center">
+                <h1 class="display-4">Laboratorio 1 - .NET</h1>
+                <img src="https://sm.ign.com/t/ign_latam/screenshot/default/landscape-1456483171-pokemon2_y5n9.1280.jpg" alt="Laboratorio 1" class="img-fluid mt-4" />
+            </div>
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - personapi_dotnet - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>

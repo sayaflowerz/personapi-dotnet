@@ -1,0 +1,96 @@
+﻿@model IEnumerable<personapi_dotnet.Models.Entities.Profesion>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a class="nav-link nav-home" href="http://localhost:9090/Profesions/Create">Create</a>
+</p>
+
+<div class="nav-box mb-4">
+    <a class="nav-link nav-edit" asp-action="Edit">Edit</a>
+    <a class="nav-link nav-details" asp-action="Details">Details</a>
+    <a class="nav-link nav-delete" asp-action="Delete">Delete</a>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Des)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Des)
+                </td>
+                <td>
+                    <div class="nav-box">
+                        <a class="nav-link nav-edit" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a class="nav-link nav-details" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a class="nav-link nav-delete" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .nav-box {
+        background-color: #e0f7fa; /* Color de fondo claro */
+        padding: 10px; /* Espaciado */
+        border-radius: 5px; /* Bordes redondeados */
+        display: flex; /* Para alinear los enlaces */
+        justify-content: space-around; /* Espacio entre enlaces */
+    }
+
+    .nav-link {
+        color: white; /* Color de texto blanco */
+        padding: 10px 15px; /* Espaciado interno */
+        border-radius: 5px; /* Bordes redondeados para enlaces */
+    }
+
+    .nav-home {
+        background-color: #007bff;
+    }
+    /* Azul */
+    .nav-swagger {
+        background-color: #0056b3;
+    }
+    /* Azul más oscuro */
+    .nav-personas {
+        background-color: #003f7f;
+    }
+    /* Azul más oscuro */
+    .nav-profesiones {
+        background-color: #002b5c;
+    }
+    /* Azul más oscuro */
+    .nav-estudios {
+        background-color: #001f3f;
+    }
+    /* Azul muy oscuro */
+    .nav-telefonos {
+        background-color: #001f33;
+    }
+    /* Azul casi negro */
+</style>
